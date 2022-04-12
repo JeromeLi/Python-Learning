@@ -7,7 +7,7 @@ async def hello():
     print('Hello World! : %s' % time.ctime() )
 
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
+    loop = asyncio.get_event_loop()  # get the event loop
     tasks = [hello() for i in range(5)]
     loop.run_until_complete(asyncio.wait(tasks))
     loop.close()
